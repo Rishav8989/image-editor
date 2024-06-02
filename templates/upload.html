@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <div style="
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    ">
+        <div style="
+            text-align: center;
+            margin-bottom: 20px;
+        ">
+            <h1>Image Editor</h1>
+        </div>
+        <form action="/upload" method="post" enctype="multipart/form-data" style="
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px; /* Adjust width as needed */
+    ">
+        <input type="file" name="file" style="
+            margin-bottom: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            padding: 10px 20px;
+            background-color: transparent;
+            cursor: pointer;
+            text-align: center;
+        ">
+        <br>
+        <label for="width">Width:</label>
+        <input type="text" id="width" name="width" value="128" style="
+            margin-bottom: 10px;
+            border: 2px solid #000000;
+            border-radius: 40px;
+            padding: 5px 10px;
+            background-color: transparent;
+            cursor: pointer;
+            text-align: center;
+        ">
+        <br>
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height" value="128" style="
+            margin-bottom: 10px;
+            border: 2px solid #000000;
+            border-radius: 40px;
+            padding: 5px 10px;
+            background-color: transparent;
+            cursor: pointer;
+            text-align: center;
+        ">
+        <br>
+        <label for="blur_level">Blur Level:</label>
+        <input type="text" id="blur_level" name="blur_level" value="3.5" style="
+            margin-bottom: 10px;
+            border: 2px solid #000000;
+            border-radius: 40px;
+            padding: 5px 10px;
+            background-color: transparent;
+            cursor: pointer;
+            text-align: center;
+        ">
+        <br>
+        <label for="resize_mode">Resize Mode:</label>
+        <select id="resize_mode" name="resize_mode" style="
+            margin-bottom: 10px;
+            border: 2px solid #000000;
+            border-radius: 40px;
+            padding: 5px 10px;
+            background-color: transparent;
+            cursor: pointer;
+            text-align: center;
+        ">
+            <option value="lanczos">Lanczos</option>
+            <option value="nearest_neighbor">Nearest Neighbor</option>
+            <option value="linear">Linear</option>
+            <option value="box">Box</option>
+        </select>
+        <br>
+        <input type="submit" value="Upload" style="
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        ">
+    </form>
+    
+    </div>
+</body>
+</html>
